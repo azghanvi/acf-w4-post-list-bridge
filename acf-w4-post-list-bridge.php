@@ -23,10 +23,10 @@ function w4pl_acf_bridge()
     );
 }
 
-function w4pl_shortcode_post_field()
+function w4pl_shortcode_post_field($atts)
 {
     /** @var WP_POST $post */
     global $post;
 
-    return get_field('file_url', $post->ID);
+    return get_field($atts["field"], $post->ID);
 }
